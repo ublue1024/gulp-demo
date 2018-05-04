@@ -1,0 +1,72 @@
+/* 初始化 */
+body,input,button{font-size:12px;font-family: "Microsoft YaHei","Droidsansfallback","HelveticaNeue","黑体","monospace", "sans-serif", "serif";}
+img{border: none;}
+a{text-decoration: none;color: #08c;outline:none;}
+form{margin: 0;}
+button:focus,a:focus,input:focus,textarea:focus{outline: none;}
+.dropdown-menu{border-radius: 0;margin: 0;}
+li{list-style: none;}
+ul{margin: 0;}
+input[readonly="readonly"] {cursor: default;}
+.inblock{display:inline-block;}
+.hide{display: none !important;}
+.hidden{visibility: hidden !important;}
+.vm{vertical-align:middle !important;}
+.clearfix:after{content:'';display:block;height:0;visibility:hidden;clear:both;}
+.fl{float:left;}
+.fr{float:right;}
+.text-nowrap{white-space:nowrap!important;}
+
+.add-ico {
+    background-image: url(../image/add_72px_1200960.png);
+    background-repeat:no-repeat;
+    height:72px;
+    width:72px;
+}
+.add2-ico {
+    background-image: url(../image/add_96px_1200960.png);
+    background-repeat:no-repeat;
+    height:96px;
+    width:96px;
+}
+.nav-ico {
+    background-image: url(../image/navigation_72px_1201170_easyicon.png);
+    background-repeat:no-repeat;
+    height:72px;
+    width:72px;
+}
+.nav2-ico {
+    background-image: url(../image/navigation_96px_1201170_easyicon.png);
+    background-repeat:no-repeat;
+    height:96px;
+    width:96px;
+}
+
+/* .left-arrow {
+    background-image: url(../images/left-arrow.png);
+    
+    height:14px;
+    width:12px;
+    margin: 20px;
+}
+.right-arrow {
+    background-image: url(../images/right-arrow.png);
+    
+    height:14px;
+    width:12px;
+    margin: 20px;
+} */
+
+.in-flight {
+    background-image: url(../images/in-flight.png);
+    
+    height:10px;
+    width:10px;
+    margin: 20px;
+}
+.out-flight {
+    background-image: url(../images/out-flight.png);
+    margin: 20px;
+    height:10px;
+    width:10px;
+}

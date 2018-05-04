@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^3.0.0",
+    "tiny-lr": "^1.1.0",
+    "uglify": "^0.1.5"
+  },
+  "devDependencies": {
+    "gulp-css-spriter": "^0.4.0",
+    "gulp-gzip": "^1.4.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-rev": "^8.1.1",
+    "gulp-rev-collector": "^1.2.4",
+    "gulp-tar": "^2.1.0",
+    "run-sequence": "^2.2.1"
+  }
+}

@@ -1,0 +1,1920 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<title>航班动态</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <link rel="stylesheet" type="text/css" href="css/flight_dynamic.css" />
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src='js/common.js'></script>
+</head>
+
+<body>
+	<div class="zh-navbar clearfix">
+		<div class="zh-logo pull-left">
+			<a class="logo" href="###">保山云瑞机场</a>
+			<div class="dropdown pull-right">
+				<a class="zh-icon" href="###">+</a>
+				<ul class="dropdown-menu">
+					<li><a href="###">保山云瑞机场</a></li>
+					<li><a href="###">丽江三义机场</a></li>
+					<li><a href="###">西双版纳嘎洒机场</a></li>
+					<li><a href="###">腾冲驼峰机场</a></li>
+					<li><a href="###">迪庆香格里拉机场</a></li>
+					<li><a href="###">大理荒草坝机场</a></li>
+					<li><a href="###">普洱思茅机场</a></li>
+					<li><a href="###">临沧博尚机场</a></li>
+					<li><a href="###">文山普者黑机场</a></li>
+					<li><a href="###">昭通机场</a></li>
+					<li><a href="###">宁蒗泸沽湖机场</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="zh-user pull-right">
+			<div class="zh-qrcode">
+				<img class="zh-icon-qrcode" src="images/icon-qrcode.png" alt="">
+				<div class="zh-dropdown">
+					<img src="images/img-qrcode-data-ios-visit2.png" alt="">
+					<p>APP下载</p>
+				</div>
+			</div>
+
+			<strong>周生生</strong>
+			<div class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					<!-- <img src="images/icon-go.png" alt=""> -->
+					<span class="zh-icon-arrow"></span>
+				</a>
+				<ul class="dropdown-menu pull-right">
+					<li><a href="#"><span class="zh-icon zh-icon-lock"></span>修改密码</a></li>
+					<li><a href="#"><span class="zh-icon zh-icon-load"></span>APP下载</a></li>
+					<li><a href="#"><span class="zh-icon zh-icon-exit"></span>退出登录</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="zh-nav">
+			<ul class="zh-nav-ul clearfix">
+				<li>
+					<a href="#"><span class="zh-icon zh-icon-product"></span>生产实况</a>
+				</li>
+				<li class="zh-cur">
+					<a href="#"><span class="zh-icon zh-icon-plane"></span>航班动态</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">雷达监控数据录入</a></li>
+						<li><a href="#">监控数据录入记录</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#"><span class="zh-icon zh-icon-memo"></span>进程管控</a>
+					<ul class="dropdown-menu">
+						<li><a href="#">机位预警平面图</a></li>
+						<li><a href="#">位进程保障图</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#"><span class="zh-icon zh-icon-p"></span>机坪监控<small class="zh-num">8</small></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">航班进程监控</a></li>
+						<li><a href="#">航班进程录入记录</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#"><span class="zh-icon zh-icon-weather"></span>气象分析<small class="zh-num">8</small></a>
+				</li>
+				<li>
+					<a href="#"><span class="zh-icon zh-icon-chart"></span>统计报告<small class="zh-num">8</small></a>
+				</li>
+				<li>
+					<a href="#"><span class="zh-icon zh-icon-bell"></span>预警通告<small class="zh-num">8</small></a>
+				</li>
+				<li>
+					<a href="#"><span class="zh-icon zh-icon-set"></span>系统设置<small class="zh-num">8</small></a>
+				</li>
+			</ul>
+		</div>
+    </div>
+
+	<div class="zh-fd-header">
+		<ul class="zh-opt">
+			<li class="zh-xl active">
+				<a href="###">进出港：<span>41</span></a>
+				<div class="zh-arrow"></div>
+				<div class="zh-dropdown">
+					<div class="zh-item">全部</div>
+					<div class="zh-item">前站计划</div>
+					<div class="zh-item">前站起飞</div>
+					<div class="zh-item">到达本场</div>
+					<div class="zh-item">出港计划</div>
+					<div class="zh-item">出港已飞</div>
+					<div class="zh-item">差异航班</div>
+				</div>
+			</li>
+			<li><a href="###">不正常：<span>41</span></a></li>
+			<li><a href="###">关注：<span>51</span></a></li>
+			<li class="zh-xl">
+				<a href="###">航食责任：<span>51</span></a>
+				<div class="zh-arrow"></div>
+				<div class="zh-dropdown">
+					<div class="zh-item">全部出港</div>
+					<div class="zh-item">出港计划</div>
+					<div class="zh-item">出港已飞</div>
+					<div class="zh-item">差异航班</div>
+				</div>
+			</li>
+			<li><a href="###">会议：<span>51</span></a></li>
+			<li class="zh-xl">
+				<a href="###">次日计划：<span>51</span></a>
+				<div class="zh-arrow"></div>
+				<div class="zh-dropdown">
+					<div class="zh-item">出港</div>
+					<div class="zh-item">进港</div>
+				</div>
+			</li>
+		</ul>
+
+		<div class="zh-operate">
+			<div class="zh-fd-select2" id="date_type">
+				<input class="zh-width-40" type="text" value="按日" readonly="readonly">
+				<input type="hidden">
+				<ul>
+					<li data-select="date" class="active">按日</li>
+					<li data-select="dateTime">按时</li>
+				</ul>
+			</div>
+			<div class="zh-date-range">
+				<input id="startTime" type="text">
+				<span class="zh-to">-</span>
+				<input id="endTime" type="text">
+				<button type="button">确定</button>
+			</div>
+			<a class="zh-skip" id="am_addFlightInfo" href="###"><b class="am_addIcon">+</b>新增航班</a>
+			<div class="zh-export-list am_importFilght">
+				<a class="zh-skip" href="###"><span class="zh-icon-export"></span>导入表格</a>
+				<ul>
+					<li><label class="importFlightNumber">导入机位<input type="file" value=""/></label><span class="tip" title="导入机位：请导入格式为csv的表格">?</span></li>
+					<li><label class="importFlightFood">导入航食计划<input type="file" value=""/></label><span class="tip" title="导入航食计划：请导入格式为xls的表格">?</span></li>
+				</ul>
+			</div>
+			<div class="zh-export-list am_importFilght">
+				<a class="zh-skip" href="###"><span class="zh-icon-export"></span>导出列表</a>
+				<ul>
+					<li>vip列表</li>
+					<li>导出航班动态</li>
+					<li class="am-custom-export">自定义导出</li>
+					<li class="am-day-plan">次日计划</li>
+				</ul>
+			</div>
+			<a class="zh-skip" id="zhListConfig" href="###"><span class="zh-icon-list"></span>列表配置</a>
+		</div>
+	</div>
+	<div class="zh-fd-main">
+		<div class="zh-fd-list zh-thead-fix zh-fd-scrollbar hide" style="display: block">
+			<!-- <div class="zh-scrollload-tip zh-top">
+				<div class="zh-loading"><ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul></div>
+				<p>正在加载</p>
+			</div>
+			<div class="zh-scrollload-tip zh-bottom">
+				<div class="zh-loading"><ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul></div>
+				<p>正在加载</p>
+			</div> -->
+
+			<!-- <div class="zh-loading-box">
+				<div class="zh-loading">
+					<ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+				</div>
+				<p>正在玩命加载中……</p>
+			</div> -->
+
+			<table class="zh-table text-left">
+				<thead>
+					<tr>
+						<th>关注</th>
+						<th>
+							<span class="zh-field-name">属性</span>
+							<span class="zh-icon-dropdown"></span>
+							<div class="zh-field-dropdown">
+								<ul>
+									<li><label class="zh-fd-checkbox"><input type="checkbox">全部属性</label></li>
+									<li><label class="zh-fd-checkbox active"><input type="checkbox" checked="checked">客班正班</label></li>
+									<li><label class="zh-fd-checkbox"><input type="checkbox">客班补班</label></li>
+									<li><label class="zh-fd-checkbox active"><input type="checkbox" checked="checked">货运包机</label></li>
+									<li><label class="zh-fd-checkbox"><input type="checkbox">试飞</label></li>
+									<li><label class="zh-fd-checkbox"><input type="checkbox">人工降雨</label></li>
+								</ul>
+							</div>
+						</th>
+						<th>
+							<span class="zh-field-name">进港</span>
+							<span class="zh-icon-dropdown"></span>
+							<div class="zh-field-dropdown">
+								<ul>
+									<li><label class="zh-fd-checkbox"><input type="checkbox">全部航班</label></li>
+									<li><label class="zh-fd-checkbox active"><input type="checkbox" checked="checked">普通航班</label></li>
+									<li><label class="zh-fd-checkbox"><input type="checkbox">要客航班</label></li>
+								</ul>
+							</div>
+						</th>
+						<th><span class="zh-field-name zh-text-gray2">出港</span></th>
+						<th><span class="zh-field-name">航线</span></th>
+						<th><span class="zh-field-name">机号</span></th>
+						<th><span class="zh-field-name">机位</span></th>
+						<th><span class="zh-field-name">机型</span></th>
+						<th><span class="zh-field-name">行李转盘</span></th>
+						<th class="zh-order">
+							<span class="zh-field-name">STD</span>
+							<span class="zh-icon-order zh-order-asc"></span>
+						</th>
+						<th class="zh-order">
+							<span class="zh-field-name">COBT</span>
+							<span class="zh-icon-order zh-order-asc"></span>
+						</th>
+						<th class="zh-order">
+							<span class="zh-field-name">ETD</span>
+							<span class="zh-icon-order zh-order-desc"></span>
+						</th>
+						<th class="zh-order">
+							<span class="zh-field-name">ABT</span>
+							<span class="zh-icon-order"></span>
+						</th>
+						<th class="zh-order">
+							<span class="zh-field-name">STA</span>
+							<span class="zh-icon-order"></span>
+						</th>
+						<th class="zh-order">
+							<span class="zh-field-name">ETA</span>
+							<span class="zh-icon-order"></span>
+						</th>
+						<th class="zh-order">
+							<span class="zh-field-name">TDT</span>
+							<span class="zh-icon-order"></span>
+						</th>
+						<th class="zh-order">
+							<span class="zh-field-name">特情</span>
+						</th>
+						<th>
+							<span class="zh-field-name">状态</span>
+							<span class="zh-icon-dropdown"></span>
+							<div class="zh-field-dropdown zh-width-80">
+								<ul class="zh-fd-scrollbar3">
+									<li><label class="zh-fd-checkbox"><input type="checkbox">全部</label></li>
+									<li><label class="zh-fd-checkbox active"><input type="checkbox" checked="checked">计划</label></li>
+									<li><label class="zh-fd-checkbox active"><input type="checkbox" checked="checked">起飞</label></li>
+									<li><label class="zh-fd-checkbox"><input type="checkbox">到达</label></li>
+									<li><label class="zh-fd-checkbox"><input type="checkbox">延误</label></li>
+									<li><label class="zh-fd-checkbox"><input type="checkbox">取消</label></li>
+									<li><label class="zh-fd-checkbox"><input type="checkbox">备降</label></li>
+									<li><label class="zh-fd-checkbox"><input type="checkbox">滑回</label></li>
+									<li><label class="zh-fd-checkbox"><input type="checkbox">返航</label></li>
+									<li><label class="zh-fd-checkbox"><input type="checkbox">未知</label></li>
+								</ul>
+							</div>
+						</th>
+						<th><span class="zh-field-name">保障状态</span></th>
+						<th><span class="zh-field-name">操作</span></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><label class="zh-fd-checkbox"><input type="checkbox">001</label></td>
+						<td><span class="zh-field-value">客班正班</span></td>
+						<td class="zh-tip-share" data-share="共享航班：MU5920 MU5920">
+							<span class="zh-circle-blue">!</span>
+							<a class="zh-field-value zh-flight-number1" href="###">MU5920(正常情况)</a>
+							<span class="zh-vip-yellow">V</span>
+							<span class="zh-vip-yellow">M</span>
+						</td>
+						<td>
+							<span class="zh-circle-green">!</span>
+							<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+							<span class="zh-vip-black">V</span>
+							<span class="zh-vip-black">M</span>
+						</td>
+						<td class="zh-tip-share" data-share="穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王"><a class="zh-field-value zh-airline" href="###">穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王</a></td>
+
+						<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+						<td>5232</td>
+						<td class="am-plane-type"><span class="zh-field-value"><i>A320A320A320A320</i>/C</span></td>
+						<td class="am-fc-red"><span class="zh-field-value">1535</span></td>
+						<td><input class="zh-input-dynamic" type="text" value="2155(1-30)"></td>
+						<td class="zh-animate-flash"><i class="am-icon-A">A</i><input class="zh-input-dynamic" type="text" readonly="readonly" value="2155(30-1)"></td>
+						<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="2155(1-30)"></td>
+						<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+						<td><input class="zh-input-dynamic zh-text-black-bold" type="text" readonly="readonly" value="1352"></td>
+						<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+						<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+						<td class="zh-tip-share" data-share="特情信息特情信息"><input class="zh-input-dynamic zh-width-100" type="text" readonly="readonly" value="特情信息特情信息"></td>
+						<td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+						<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td>
+
+						<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+					</tr>
+					<tr class="delay">
+						<td><label class="zh-fd-checkbox"><input type="checkbox"></label></td>
+						<td><span class="zh-field-value">客班正班</span></td>
+						<td class="zh-tip-share" data-share="共享航班：MU5920 MU5920 MU5920 MU5920">
+							<a class="zh-field-value zh-text-black-bold zh-flight-number2" href="###">MU5920(进港返航)</a>
+							<span class="zh-vip-yellow">V</span>
+						</td>
+						<td>
+							<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+							<span class="zh-vip-black">V</span>
+						</td>
+						<td class="zh-tip-share" data-share="北京首都-昆明-杭州"><a class="zh-field-value zh-airline" href="###">北京首都-昆明-杭州</a></td>
+
+						<td><a class="zh-field-value zh-plane-number zh-text-black-bold" href="###">B5181</a></td>
+						<td>5232</td>
+						<td class="am-plane-type"><span class="zh-field-value"><i>A320</i>/C</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td><span class="zh-field-value">1545+1</span></td>
+						<td><span class="zh-field-value zh-text-black-bold">1352</span></td>
+						<td><span class="zh-field-value">2345</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td class="zh-tip-share" data-share="特情信息特情信息"><input class="zh-input-dynamic zh-width-100" type="text" readonly="readonly" value="特情信息特情信息"></td>
+						<td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+						<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td>
+
+						<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+					</tr>
+					<tr class="zh-bg-blue">
+						<td><label class="zh-fd-checkbox"><input type="checkbox">003</label></td>
+						<td><span class="zh-field-value">客班正班</span></td>
+						<td class="zh-tip-share" data-share="共享航班：MU5920 MU5920 MU5920 MU5920 MU5920 MU5920">
+							<span class="zh-circle-blue">!</span>
+							<a class="zh-field-value zh-flight-number3" href="###">MU5920(A飞本场备降至B)</a>
+							<span class="zh-vip-yellow">V</span>
+						</td>
+						<td>
+							<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+							<span class="zh-vip-black">V</span>
+						</td>
+						<td class="zh-tip-share" data-share="北京首都-昆明-杭州"><a class="zh-field-value zh-airline" href="###">北京首都-昆明-杭州</a></td>
+
+						<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+						<td>5232</td>
+						<td><span class="zh-field-value">A320/C</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545+1</span></td>
+						<td><span class="zh-field-value">1352</span></td>
+						<td><span class="zh-field-value">2345</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td class="zh-tip-share" data-share="特情信息特情信息"><input class="zh-input-dynamic zh-width-100" type="text" readonly="readonly" value="特情信息特情信息"></td>
+						<td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">返航</span></td>
+						<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td>
+
+						<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+					</tr>
+					<tr class="zh-bg-blue delay">
+						<td><label class="zh-fd-checkbox"><input type="checkbox"></label></td>
+						<td><span class="zh-field-value">客班正班</span></td>
+						<td>
+							<a class="zh-field-value zh-flight-number4" href="###">MU5920(本场飞B备降至C)</a>
+							<span class="zh-vip-yellow">V</span>
+						</td>
+						<td>
+							<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+							<span class="zh-vip-black">V</span>
+						</td>
+						<td><a class="zh-field-value zh-airline" href="###">北京首都-昆明-杭州</a></td>
+
+						<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+						<td>5232</td>
+						<td><span class="zh-field-value">A320/C</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545+1</span></td>
+						<td><span class="zh-field-value">1352</span></td>
+						<td><span class="zh-field-value">2345</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td class="zh-tip-share" data-share="特情信息特情信息"><input class="zh-input-dynamic zh-width-100" type="text" readonly="readonly" value="特情信息特情信息"></td>
+						<td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">滑回</span></td>
+						<td><span class="zh-field-value">1520</span></td>
+
+						<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+					</tr>
+					<tr class="zh-bg-blue">
+						<td><label class="zh-fd-checkbox"><input type="checkbox">005</label></td>
+						<td><span class="zh-field-value">客班正班</span></td>
+						<td>
+							<a class="zh-field-value zh-flight-number5" href="###">MU5920(本场返航)</a>
+							<span class="zh-vip-yellow">V</span>
+						</td>
+						<td>
+							<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+							<span class="zh-vip-black">V</span>
+						</td>
+						<td><a class="zh-field-value zh-airline" href="###">北京首都-昆明-杭州</a></td>
+
+						<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+						<td>5232</td>
+						<td><span class="zh-field-value">A320/C</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545+1</span></td>
+						<td><span class="zh-field-value">1352</span></td>
+						<td><span class="zh-field-value">2345</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td class="zh-tip-share" data-share="特情信息特情信息"><input class="zh-input-dynamic zh-width-100" type="text" readonly="readonly" value="特情信息特情信息"></td>
+						<td><span class="zh-field-value">计划</span><span class="zh-status zh-status-orange">延误</span></td>
+						<td><span class="zh-field-value">1520</span></td>
+
+						<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+					</tr>
+					<tr class="zh-bg-blue">
+						<td><label class="zh-fd-checkbox"><input type="checkbox">006</label></td>
+						<td><span class="zh-field-value">客班正班</span></td>
+						<td>
+							<a class="zh-field-value zh-flight-number6" href="###">MU5920(本场滑回)</a>
+							<span class="zh-vip-yellow">V</span>
+						</td>
+						<td>
+							<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+							<span class="zh-vip-black">V</span>
+						</td>
+						<td><a class="zh-field-value zh-airline" href="###">北京首都-昆明-杭州</a></td>
+
+						<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+						<td>5232</td>
+						<td><span class="zh-field-value">A320/C</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545+1</span></td>
+						<td><span class="zh-field-value">1352</span></td>
+						<td><span class="zh-field-value">2345</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td class="zh-tip-share" data-share="特情信息特情信息"><input class="zh-input-dynamic zh-width-100" type="text" readonly="readonly" value="特情信息特情信息"></td>
+						<td><span class="zh-field-value">计划</span></td>
+						<td><span class="zh-field-value">1520</span></td>
+						<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+					</tr>
+					<tr class="zh-bg-blue">
+						<td><label class="zh-fd-checkbox"><input type="checkbox">007</label></td>
+						<td><span class="zh-field-value">客班正班</span></td>
+						<td>
+							<a class="zh-field-value zh-flight-number7" href="###">MU5920(A飞B备降本场)</a>
+							<span class="zh-vip-yellow">V</span>
+						</td>
+						<td>
+							<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+							<span class="zh-vip-black">V</span>
+						</td>
+						<td><a class="zh-field-value zh-airline" href="###">北京首都-昆明-杭州</a></td>
+
+						<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+						<td>5232</td>
+						<td><span class="zh-field-value">A320/C</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545+1</span></td>
+						<td><span class="zh-field-value">1352</span></td>
+						<td><span class="zh-field-value">2345</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td class="zh-tip-share" data-share="特情信息特情信息"><input class="zh-input-dynamic zh-width-100" type="text" readonly="readonly" value="特情信息特情信息"></td>
+						<td><span class="zh-field-value">计划</span></td>
+						<td><span class="zh-field-value">1520</span></td>
+
+						<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+					</tr>
+					<tr class="zh-bg-green">
+						<td><label class="zh-fd-checkbox"><input type="checkbox">008</label></td>
+						<td><span class="zh-field-value">客班正班</span></td>
+						<td>
+							<span class="zh-circle-green">!</span>
+							<a class="zh-field-value zh-flight-number8" href="###">MU5920(进港滑回)</a>
+							<span class="zh-vip-yellow">V</span>
+						</td>
+						<td>
+							<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+							<span class="zh-vip-black">V</span>
+						</td>
+						<td><a class="zh-field-value zh-airline" href="###">北京首都-昆明-杭州</a></td>
+
+						<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+						<td>5232</td>
+						<td><span class="zh-field-value">A320/C</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545+1</span></td>
+						<td><span class="zh-field-value">1352</span></td>
+						<td><span class="zh-field-value">2345</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td class="zh-tip-share" data-share="特情信息特情信息"><input class="zh-input-dynamic zh-width-100" type="text" readonly="readonly" value="特情信息特情信息"></td>
+						<td><span class="zh-field-value">计划</span></td>
+						<td><span class="zh-field-value">1520</span></td>
+
+						<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+					</tr>
+					<tr class="zh-bg-green delay">
+						<td><label class="zh-fd-checkbox"><input type="checkbox"></label></td>
+						<td><span class="zh-field-value">客班正班</span></td>
+						<td>
+							<a class="zh-field-value zh-flight-number" href="###">MU5920</a>
+							<span class="zh-vip-yellow">V</span>
+						</td>
+						<td>
+							<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+							<span class="zh-vip-black">V</span>
+						</td>
+						<td><a class="zh-field-value zh-airline" href="###">北京首都-昆明-杭州</a></td>
+
+						<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+						<td>5232</td>
+						<td><span class="zh-field-value">A320/C</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545+1</span></td>
+						<td><span class="zh-field-value">1352</span></td>
+						<td><span class="zh-field-value">2345</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td class="zh-tip-share" data-share="特情信息特情信息"><input class="zh-input-dynamic zh-width-100" type="text" readonly="readonly" value="特情信息特情信息"></td>
+						<td><span class="zh-field-value">计划</span></td>
+						<td><span class="zh-field-value">1520</span></td>
+
+						<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+					</tr>
+					<tr class="zh-bg-green">
+						<td><label class="zh-fd-checkbox"><input type="checkbox">010</label></td>
+						<td><span class="zh-field-value">客班正班</span></td>
+						<td>
+							<a class="zh-field-value zh-flight-number" href="###">MU5920</a>
+							<span class="zh-vip-yellow">V</span>
+						</td>
+						<td>
+							<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+							<span class="zh-vip-black">V</span>
+						</td>
+						<td><a class="zh-field-value zh-airline" href="###">北京首都-昆明-杭州</a></td>
+
+						<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+						<td>5232</td>
+						<td><span class="zh-field-value">A320/C</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545+1</span></td>
+						<td><span class="zh-field-value">1352</span></td>
+						<td><span class="zh-field-value">2345</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td class="zh-tip-share" data-share="特情信息特情信息"><input class="zh-input-dynamic zh-width-100" type="text" readonly="readonly" value="特情信息特情信息"></td>
+						<td><span class="zh-field-value">计划</span></td>
+						<td><span class="zh-field-value">1520</span></td>
+
+						<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+					</tr>
+					<tr class="zh-bg-green">
+						<td><label class="zh-fd-checkbox"><input type="checkbox">011</label></td>
+						<td><span class="zh-field-value">客班正班</span></td>
+						<td>
+							<a class="zh-field-value zh-flight-number" href="###">MU5920</a>
+							<span class="zh-vip-yellow">V</span>
+						</td>
+						<td>
+							<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+							<span class="zh-vip-black">V</span>
+						</td>
+						<td><a class="zh-field-value zh-airline" href="###">北京首都-昆明-杭州</a></td>
+
+						<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+						<td>5232</td>
+						<td><span class="zh-field-value">A320/C</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545+1</span></td>
+						<td><span class="zh-field-value">1352</span></td>
+						<td><span class="zh-field-value">2345</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td class="zh-tip-share" data-share="特情信息特情信息"><input class="zh-input-dynamic zh-width-100" type="text" readonly="readonly" value="特情信息特情信息"></td>
+						<td><span class="zh-field-value">计划</span></td>
+						<td><span class="zh-field-value">1520</span></td>
+
+						<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+					</tr>
+					<tr class="zh-bg-green">
+						<td><label class="zh-fd-checkbox"><input type="checkbox">012</label></td>
+						<td><span class="zh-field-value">客班正班</span></td>
+						<td>
+							<a class="zh-field-value zh-flight-number" href="###">MU5920</a>
+							<span class="zh-vip-yellow">V</span>
+						</td>
+						<td>
+							<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+							<span class="zh-vip-black">V</span>
+						</td>
+						<td><a class="zh-field-value zh-airline" href="###">北京首都-昆明-杭州</a></td>
+
+						<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+						<td>5232</td>
+						<td><span class="zh-field-value">A320/C</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545+1</span></td>
+						<td><span class="zh-field-value">1352</span></td>
+						<td><span class="zh-field-value">2345</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td class="zh-tip-share" data-share="特情信息特情信息"><input class="zh-input-dynamic zh-width-100" type="text" readonly="readonly" value="特情信息特情信息"></td>
+						<td><span class="zh-field-value">计划</span></td>
+						<td><span class="zh-field-value">1520</span></td>
+
+						<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+					</tr>
+					<tr class="zh-bg-yellow">
+						<td><label class="zh-fd-checkbox"><input type="checkbox">013</label></td>
+						<td><span class="zh-field-value">客班正班</span></td>
+						<td>
+							<a class="zh-field-value zh-flight-number" href="###">MU5920</a>
+							<span class="zh-vip-yellow">V</span>
+						</td>
+						<td>
+							<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+							<span class="zh-vip-black">V</span>
+						</td>
+						<td><a class="zh-field-value zh-airline" href="###">北京首都-昆明-杭州</a></td>
+
+						<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+						<td>5232</td>
+						<td><span class="zh-field-value">A320/C</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545+1</span></td>
+						<td><span class="zh-field-value">1352</span></td>
+						<td><span class="zh-field-value">2345</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td class="zh-tip-share" data-share="特情信息特情信息"><input class="zh-input-dynamic zh-width-100" type="text" readonly="readonly" value="特情信息特情信息"></td>
+						<td><span class="zh-field-value">计划</span></td>
+						<td><span class="zh-field-value">1520</span></td>
+
+						<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+					</tr>
+					<tr class="zh-bg-yellow delay">
+						<td><label class="zh-fd-checkbox"><input type="checkbox"></label></td>
+						<td><span class="zh-field-value">客班正班</span></td>
+						<td>
+							<a class="zh-field-value zh-flight-number" href="###">MU5920</a>
+							<span class="zh-vip-yellow">V</span>
+						</td>
+						<td>
+							<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+							<span class="zh-vip-black">V</span>
+						</td>
+						<td><a class="zh-field-value zh-airline" href="###">北京首都-昆明-杭州</a></td>
+
+						<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+						<td>5232</td>
+						<td><span class="zh-field-value">A320/C</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545+1</span></td>
+						<td><span class="zh-field-value">1352</span></td>
+						<td><span class="zh-field-value">2345</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td class="zh-tip-share" data-share="特情信息特情信息"><input class="zh-input-dynamic zh-width-100" type="text" readonly="readonly" value="特情信息特情信息"></td>
+						<td><span class="zh-field-value">计划</span></td>
+						<td><span class="zh-field-value">1520</span></td>
+
+						<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+					</tr>
+					<tr class="zh-bg-red">
+						<td><label class="zh-fd-checkbox"><input type="checkbox">015</label></td>
+						<td><span class="zh-field-value">客班正班</span></td>
+						<td>
+							<a class="zh-field-value zh-flight-number" href="###">MU5920</a>
+							<span class="zh-vip-yellow">V</span>
+						</td>
+						<td>
+							<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+							<span class="zh-vip-black">V</span>
+						</td>
+						<td><a class="zh-field-value zh-airline" href="###">北京首都-昆明-杭州</a></td>
+
+						<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+						<td>5232</td>
+						<td><span class="zh-field-value">A320/C</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545+1</span></td>
+						<td><span class="zh-field-value">1352</span></td>
+						<td><span class="zh-field-value">2345</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td class="zh-tip-share" data-share="特情信息特情信息"><input class="zh-input-dynamic zh-width-100" type="text" readonly="readonly" value="特情信息特情信息"></td>
+						<td><span class="zh-field-value">计划</span></td>
+						<td><span class="zh-field-value">1520</span></td>
+
+						<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+					</tr>
+					<tr class="zh-bg-red delay">
+						<td><label class="zh-fd-checkbox"><input type="checkbox"></label></td>
+						<td><span class="zh-field-value">客班正班</span></td>
+						<td class="zh-tip-share" data-share="共享航班：MU5920 MU5920 MU5920 MU5920 MU5920 MU5920">
+							<a class="zh-field-value zh-flight-number" href="###">MU5920</a>
+							<span class="zh-vip-yellow">V</span>
+						</td>
+						<td>
+							<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+							<span class="zh-vip-black">V</span>
+						</td>
+						<td><a class="zh-field-value zh-airline" href="###">北京首都-昆明-杭州</a></td>
+
+						<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+						<td>5232</td>
+						<td><span class="zh-field-value">A320/C</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545+1</span></td>
+						<td><span class="zh-field-value">1352</span></td>
+						<td><span class="zh-field-value">2345</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td class="zh-tip-share" data-share="特情信息特情信息"><input class="zh-input-dynamic zh-width-100" type="text" readonly="readonly" value="特情信息特情信息"></td>
+						<td><span class="zh-field-value">计划</span></td>
+						<td><span class="zh-field-value">1520</span></td>
+
+						<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+					</tr>
+					<tr class="zh-bg-red">
+						<td><label class="zh-fd-checkbox"><input type="checkbox">017</label></td>
+						<td><span class="zh-field-value">客班正班</span></td>
+						<td class="zh-tip-share" data-share="共享航班：MU5920 MU5920 MU5920 MU5920 MU5920 MU5920">
+							<a class="zh-field-value zh-flight-number" href="###">MU5920</a>
+							<span class="zh-vip-yellow">V</span>
+						</td>
+						<td>
+							<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+							<span class="zh-vip-black">V</span>
+						</td>
+						<td><a class="zh-field-value zh-airline" href="###">北京首都-昆明-杭州</a></td>
+
+						<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+						<td>5232</td>
+						<td><span class="zh-field-value">A320/C</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td><span class="zh-field-value">1535</span></td>
+						<td><span class="zh-field-value">1545+1</span></td>
+						<td><span class="zh-field-value">1352</span></td>
+						<td><span class="zh-field-value">2345</span></td>
+						<td><span class="zh-field-value">1545</span></td>
+						<td class="zh-tip-share" data-share="特情信息特情信息"><input class="zh-input-dynamic zh-width-100" type="text" readonly="readonly" value="特情信息特情信息"></td>
+						<td><span class="zh-field-value">计划</span></td>
+						<td><span class="zh-field-value">1520</span></td>
+
+						<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- 搜索框展示某一航班的进港和出港列表 -->
+		<div class="zh-fd-list " style="display: block;border-radius: 0px;">
+			<div class="zh-loading-box hide " style="z-index:102;">
+				<div class="zh-loading">
+					<ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+				</div>
+				<p>数据正在玩命加载中……</p>
+			</div>
+
+
+			<div class="zh-fd-header  " style="background-color:transparent;margin-bottom:0px;">
+				<ul class="zh-opt">
+					<li class="zh-xl active">
+						<a href="###">进港：<span>41</span></a>
+						<div class="zh-arrow"></div>
+						<div class="zh-dropdown">
+							<div class="zh-item">全部</div>
+							<div class="zh-item">前站计划</div>
+							<div class="zh-item">前站起飞</div>
+							<div class="zh-item">到达本场</div>
+							<div class="zh-item">出港计划</div>
+							<div class="zh-item">出港已飞</div>
+							<div class="zh-item">差异航班</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+				
+			<div class="zh-fd-scrollbar zh-thead-fix" style="display: block; overflow:auto;height:225px;">
+				<table class="zh-table text-left js-table1" style="">
+					<thead>
+						<tr>
+							<th>关注</th>
+							<th>
+								<span class="zh-field-name">属性</span>
+								<span class="zh-icon-dropdown"></span>
+								<div class="zh-field-dropdown">
+									<ul>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">全部属性</label></li>
+										<li><label class="zh-fd-checkbox active"><input type="checkbox" checked="checked">客班正班</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">客班补班</label></li>
+										<li><label class="zh-fd-checkbox active"><input type="checkbox" checked="checked">货运包机</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">试飞</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">人工降雨</label></li>
+									</ul>
+								</div>
+							</th>
+							<th>
+								<span class="zh-field-name">进港</span>
+								<span class="zh-icon-dropdown"></span>
+								<div class="zh-field-dropdown">
+									<ul>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">全部航班</label></li>
+										<li><label class="zh-fd-checkbox active"><input type="checkbox" checked="checked">普通航班</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">要客航班</label></li>
+									</ul>
+								</div>
+							</th>
+							<th><span class="zh-field-name zh-text-gray2">出港</span></th>
+							<th><span class="zh-field-name">航线</span></th>
+							<th>
+								<span class="zh-field-name">状态</span>
+								<span class="zh-icon-dropdown"></span>
+								<div class="zh-field-dropdown zh-width-80">
+									<ul class="zh-fd-scrollbar3">
+										<li><label class="zh-fd-checkbox"><input type="checkbox">全部</label></li>
+										<li><label class="zh-fd-checkbox active"><input type="checkbox" checked="checked">计划</label></li>
+										<li><label class="zh-fd-checkbox active"><input type="checkbox" checked="checked">起飞</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">到达</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">延误</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">取消</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">备降</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">滑回</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">返航</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">未知</label></li>
+									</ul>
+								</div>
+							</th>
+							<th><span class="zh-field-name">保障状态</span></th>
+							<th><span class="zh-field-name">机号</span></th>
+							<th><span class="zh-field-name">机位</span></th>
+							<th><span class="zh-field-name">机型</span></th>
+							<th><span class="zh-field-name">行李转盘</span></th>
+							<th class="zh-order">
+								<span class="zh-field-name">计飞</span>
+								<span class="zh-icon-order"></span>
+							</th>
+							<th class="zh-order">
+								<span class="zh-field-name">预飞(F)</span>
+								<span class="zh-icon-order"></span>
+							</th>
+							<th class="zh-order">
+								<span class="zh-field-name">实飞</span>
+								<span class="zh-icon-order"></span>
+							</th>
+							<th class="zh-order">
+								<span class="zh-field-name">计达</span>
+								<span class="zh-icon-order"></span>
+							</th>
+							<th class="zh-order">
+								<span class="zh-field-name">预达(F)</span>
+								<span class="zh-icon-order"></span>
+							</th>
+							<th class="zh-order">
+								<span class="zh-field-name">实达</span>
+								<span class="zh-icon-order"></span>
+							</th>
+							<th class="zh-order">
+								<span class="zh-field-name">预飞(J)</span>
+								<span class=""></span>
+							</th>
+							<th class="zh-order">
+								<span class="zh-field-name">预达(J)</span>
+								<span class=""></span>
+							</th>
+							<th class="zh-order">
+								<span class="zh-field-name">跑道</span>
+							</th>
+							<th><span class="zh-field-name">操作</span></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><label class="zh-fd-checkbox"><input type="checkbox">001</label></td>
+							<td><span class="zh-field-value">客班正班</span></td>
+							<td class="zh-tip-share" data-share="共享航班：MU5920 MU5920">
+								<span class="zh-circle-blue">!</span>
+								<a class="zh-field-value zh-flight-number1" href="###">MU5920(正常情况)</a>
+								<span class="zh-vip-yellow">V</span>
+								<span class="zh-vip-yellow">M</span>
+							</td>
+							<td>
+								<span class="zh-circle-green">!</span>
+								<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+								<span class="zh-vip-black">V</span>
+								<span class="zh-vip-black">M</span>
+							</td>
+							<td class="zh-tip-share" data-share="穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王"><a class="zh-field-value zh-airline" href="###">穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王</a></td>
+	
+							<td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td>
+	
+							<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+							<td>5232</td>
+							<td class="am-plane-type"><span class="zh-field-value"><i>A320A320A320A320</i>/C</span></td>
+							<td><span class="zh-field-value">1</span></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic zh-text-black-bold" type="text" readonly="readonly" value="1352"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value=""></td>
+							<!-- <td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td> -->
+	
+							<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+						</tr>
+						<tr>
+							<td><label class="zh-fd-checkbox"><input type="checkbox">001</label></td>
+							<td><span class="zh-field-value">客班正班</span></td>
+							<td class="zh-tip-share" data-share="共享航班：MU5920 MU5920">
+								<span class="zh-circle-blue">!</span>
+								<a class="zh-field-value zh-flight-number1" href="###">MU5920(正常情况)</a>
+								<span class="zh-vip-yellow">V</span>
+								<span class="zh-vip-yellow">M</span>
+							</td>
+							<td>
+								<span class="zh-circle-green">!</span>
+								<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+								<span class="zh-vip-black">V</span>
+								<span class="zh-vip-black">M</span>
+							</td>
+							<td class="zh-tip-share" data-share="穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王"><a class="zh-field-value zh-airline" href="###">穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王</a></td>
+	
+							<td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td>
+	
+							<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+							<td>5232</td>
+							<td class="am-plane-type"><span class="zh-field-value"><i>A320A320A320A320</i>/C</span></td>
+							<td><span class="zh-field-value">1</span></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic zh-text-black-bold" type="text" readonly="readonly" value="1352"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value=""></td>
+							<!-- <td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td> -->
+	
+							<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+						</tr>
+						<tr>
+							<td><label class="zh-fd-checkbox"><input type="checkbox">001</label></td>
+							<td><span class="zh-field-value">客班正班</span></td>
+							<td class="zh-tip-share" data-share="共享航班：MU5920 MU5920">
+								<span class="zh-circle-blue">!</span>
+								<a class="zh-field-value zh-flight-number1" href="###">MU5920(正常情况)</a>
+								<span class="zh-vip-yellow">V</span>
+								<span class="zh-vip-yellow">M</span>
+							</td>
+							<td>
+								<span class="zh-circle-green">!</span>
+								<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+								<span class="zh-vip-black">V</span>
+								<span class="zh-vip-black">M</span>
+							</td>
+							<td class="zh-tip-share" data-share="穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王"><a class="zh-field-value zh-airline" href="###">穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王</a></td>
+	
+							<td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td>
+	
+							<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+							<td>5232</td>
+							<td class="am-plane-type"><span class="zh-field-value"><i>A320A320A320A320</i>/C</span></td>
+							<td><span class="zh-field-value">1</span></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic zh-text-black-bold" type="text" readonly="readonly" value="1352"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value=""></td>
+							<!-- <td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td> -->
+	
+							<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+						</tr>
+						<tr>
+							<td><label class="zh-fd-checkbox"><input type="checkbox">001</label></td>
+							<td><span class="zh-field-value">客班正班</span></td>
+							<td class="zh-tip-share" data-share="共享航班：MU5920 MU5920">
+								<span class="zh-circle-blue">!</span>
+								<a class="zh-field-value zh-flight-number1" href="###">MU5920(正常情况)</a>
+								<span class="zh-vip-yellow">V</span>
+								<span class="zh-vip-yellow">M</span>
+							</td>
+							<td>
+								<span class="zh-circle-green">!</span>
+								<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+								<span class="zh-vip-black">V</span>
+								<span class="zh-vip-black">M</span>
+							</td>
+							<td class="zh-tip-share" data-share="穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王"><a class="zh-field-value zh-airline" href="###">穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王</a></td>
+	
+							<td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td>
+	
+							<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+							<td>5232</td>
+							<td class="am-plane-type"><span class="zh-field-value"><i>A320A320A320A320</i>/C</span></td>
+							<td><span class="zh-field-value">1</span></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic zh-text-black-bold" type="text" readonly="readonly" value="1352"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value=""></td>
+							<!-- <td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td> -->
+	
+							<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+						</tr>
+						<tr>
+							<td><label class="zh-fd-checkbox"><input type="checkbox">001</label></td>
+							<td><span class="zh-field-value">客班正班</span></td>
+							<td class="zh-tip-share" data-share="共享航班：MU5920 MU5920">
+								<span class="zh-circle-blue">!</span>
+								<a class="zh-field-value zh-flight-number1" href="###">MU5920(正常情况)</a>
+								<span class="zh-vip-yellow">V</span>
+								<span class="zh-vip-yellow">M</span>
+							</td>
+							<td>
+								<span class="zh-circle-green">!</span>
+								<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+								<span class="zh-vip-black">V</span>
+								<span class="zh-vip-black">M</span>
+							</td>
+							<td class="zh-tip-share" data-share="穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王"><a class="zh-field-value zh-airline" href="###">穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王</a></td>
+	
+							<td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td>
+	
+							<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+							<td>5232</td>
+							<td class="am-plane-type"><span class="zh-field-value"><i>A320A320A320A320</i>/C</span></td>
+							<td><span class="zh-field-value">1</span></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic zh-text-black-bold" type="text" readonly="readonly" value="1352"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value=""></td>
+							<!-- <td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td> -->
+	
+							<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		
+			<div class="zh-fd-header zh-mt-10 " style="background-color:transparent; margin-bottom:0px;">
+				<ul class="zh-opt">
+					<li class="zh-xl active">
+						<a href="###">出港：<span>3</span></a>
+						<div class="zh-arrow"></div>
+						<div class="zh-dropdown">
+							<div class="zh-item">全部出港</div>
+							<div class="zh-item">出港计划</div>
+							<div class="zh-item">出港已飞</div>
+							<div class="zh-item">始发航班</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		
+			<div class="zh-fd-scrollbar zh-thead-fix" style="display: block; overflow:auto; height:225px;">
+				<table class="zh-table text-left js-table2" style="">
+					<thead>
+						<tr>
+							<th>关注</th>
+							<th>
+								<span class="zh-field-name">属性</span>
+								<span class="zh-icon-dropdown"></span>
+								<div class="zh-field-dropdown">
+									<ul>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">全部属性</label></li>
+										<li><label class="zh-fd-checkbox active"><input type="checkbox" checked="checked">客班正班</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">客班补班</label></li>
+										<li><label class="zh-fd-checkbox active"><input type="checkbox" checked="checked">货运包机</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">试飞</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">人工降雨</label></li>
+									</ul>
+								</div>
+							</th>
+							<th>
+								<span class="zh-field-name">进港</span>
+								<span class="zh-icon-dropdown"></span>
+								<div class="zh-field-dropdown">
+									<ul>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">全部航班</label></li>
+										<li><label class="zh-fd-checkbox active"><input type="checkbox" checked="checked">普通航班</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">要客航班</label></li>
+									</ul>
+								</div>
+							</th>
+							<th><span class="zh-field-name zh-text-gray2">出港</span></th>
+							<th><span class="zh-field-name">航线</span></th>
+	
+							<th>
+								<span class="zh-field-name">状态</span>
+								<span class="zh-icon-dropdown"></span>
+								<div class="zh-field-dropdown zh-width-80">
+									<ul class="zh-fd-scrollbar3">
+										<li><label class="zh-fd-checkbox"><input type="checkbox">全部</label></li>
+										<li><label class="zh-fd-checkbox active"><input type="checkbox" checked="checked">计划</label></li>
+										<li><label class="zh-fd-checkbox active"><input type="checkbox" checked="checked">起飞</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">到达</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">延误</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">取消</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">备降</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">滑回</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">返航</label></li>
+										<li><label class="zh-fd-checkbox"><input type="checkbox">未知</label></li>
+									</ul>
+								</div>
+							</th>
+							<th><span class="zh-field-name">保障状态</span></th>
+	
+							<th><span class="zh-field-name">机号</span></th>
+							<th><span class="zh-field-name">机位</span></th>
+							<th><span class="zh-field-name">机型</span></th>
+							<th><span class="zh-field-name">行李转盘</span></th>
+							<th class="zh-order">
+								<span class="zh-field-name">计飞</span>
+								<span class="zh-icon-order"></span>
+							</th>
+							<th class="zh-order">
+								<span class="zh-field-name">预飞(F)</span>
+								<span class="zh-icon-order"></span>
+							</th>
+							<th class="zh-order">
+								<span class="zh-field-name">实飞</span>
+								<span class="zh-icon-order"></span>
+							</th>
+							<th class="zh-order">
+								<span class="zh-field-name">计达</span>
+								<span class="zh-icon-order"></span>
+							</th>
+							<th class="zh-order">
+								<span class="zh-field-name">预达(F)</span>
+								<span class="zh-icon-order"></span>
+							</th>
+							<th class="zh-order">
+								<span class="zh-field-name">实达</span>
+								<span class="zh-icon-order"></span>
+							</th>
+							<th class="zh-order">
+								<span class="zh-field-name">预飞(J)</span>
+								<span class=""></span>
+							</th>
+							<th class="zh-order">
+								<span class="zh-field-name">预达(J)</span>
+								<span class=""></span>
+							</th>
+							<th class="zh-order">
+								<span class="zh-field-name">跑道</span>
+							</th>
+						
+							<th><span class="zh-field-name">操作</span></th>
+						</tr>
+						
+					</thead>
+					<tbody>
+						<tr>
+							<td><label class="zh-fd-checkbox"><input type="checkbox">001</label></td>
+							<td><span class="zh-field-value">客班正班</span></td>
+							<td class="zh-tip-share" data-share="共享航班：MU5920 MU5920">
+								<span class="zh-circle-blue">!</span>
+								<a class="zh-field-value zh-flight-number1" href="###">MU5920(正常情况)</a>
+								<span class="zh-vip-yellow">V</span>
+								<span class="zh-vip-yellow">M</span>
+							</td>
+							<td>
+								<span class="zh-circle-green">!</span>
+								<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+								<span class="zh-vip-black">V</span>
+								<span class="zh-vip-black">M</span>
+							</td>
+							<td class="zh-tip-share" data-share="穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王"><a class="zh-field-value zh-airline" href="###">穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王</a></td>
+	
+							<td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td>
+	
+							<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+							<td>5232</td>
+							<td class="am-plane-type"><span class="zh-field-value"><i>A320A320A320A320</i>/C</span></td>
+							<td><span class="zh-field-value">1</span></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic zh-text-black-bold" type="text" readonly="readonly" value="1352"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value=""></td>
+							<!-- <td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td> -->
+	
+							<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+						</tr>
+						<tr>
+							<td><label class="zh-fd-checkbox"><input type="checkbox">001</label></td>
+							<td><span class="zh-field-value">客班正班</span></td>
+							<td class="zh-tip-share" data-share="共享航班：MU5920 MU5920">
+								<span class="zh-circle-blue">!</span>
+								<a class="zh-field-value zh-flight-number1" href="###">MU5920(正常情况)</a>
+								<span class="zh-vip-yellow">V</span>
+								<span class="zh-vip-yellow">M</span>
+							</td>
+							<td>
+								<span class="zh-circle-green">!</span>
+								<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+								<span class="zh-vip-black">V</span>
+								<span class="zh-vip-black">M</span>
+							</td>
+							<td class="zh-tip-share" data-share="穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王"><a class="zh-field-value zh-airline" href="###">穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王</a></td>
+	
+							<td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td>
+	
+							<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+							<td>5232</td>
+							<td class="am-plane-type"><span class="zh-field-value"><i>A320A320A320A320</i>/C</span></td>
+							<td><span class="zh-field-value">1</span></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic zh-text-black-bold" type="text" readonly="readonly" value="1352"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value=""></td>
+							<!-- <td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td> -->
+	
+							<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+						</tr>
+						<tr>
+							<td><label class="zh-fd-checkbox"><input type="checkbox">001</label></td>
+							<td><span class="zh-field-value">客班正班</span></td>
+							<td class="zh-tip-share" data-share="共享航班：MU5920 MU5920">
+								<span class="zh-circle-blue">!</span>
+								<a class="zh-field-value zh-flight-number1" href="###">MU5920(正常情况)</a>
+								<span class="zh-vip-yellow">V</span>
+								<span class="zh-vip-yellow">M</span>
+							</td>
+							<td>
+								<span class="zh-circle-green">!</span>
+								<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+								<span class="zh-vip-black">V</span>
+								<span class="zh-vip-black">M</span>
+							</td>
+							<td class="zh-tip-share" data-share="穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王"><a class="zh-field-value zh-airline" href="###">穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王</a></td>
+	
+							<td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td>
+	
+							<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+							<td>5232</td>
+							<td class="am-plane-type"><span class="zh-field-value"><i>A320A320A320A320</i>/C</span></td>
+							<td><span class="zh-field-value">1</span></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic zh-text-black-bold" type="text" readonly="readonly" value="1352"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value=""></td>
+							<!-- <td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td> -->
+	
+							<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+						</tr>
+						
+						<tr>
+							<td><label class="zh-fd-checkbox"><input type="checkbox">001</label></td>
+							<td><span class="zh-field-value">客班正班</span></td>
+							<td class="zh-tip-share" data-share="共享航班：MU5920 MU5920">
+								<span class="zh-circle-blue">!</span>
+								<a class="zh-field-value zh-flight-number1" href="###">MU5920(正常情况)</a>
+								<span class="zh-vip-yellow">V</span>
+								<span class="zh-vip-yellow">M</span>
+							</td>
+							<td>
+								<span class="zh-circle-green">!</span>
+								<a class="zh-field-value zh-flight-number zh-text-gray2" href="###">MU5920</a>
+								<span class="zh-vip-black">V</span>
+								<span class="zh-vip-black">M</span>
+							</td>
+							<td class="zh-tip-share" data-share="穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王"><a class="zh-field-value zh-airline" href="###">穆罕默德·本·阿卜杜勒-阿齐兹亲王-昆明-穆罕默德·本·阿卜杜勒-阿齐兹亲王</a></td>
+	
+							<td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td>
+	
+							<td><a class="zh-field-value zh-plane-number" href="###">B5181</a></td>
+							<td>5232</td>
+							<td class="am-plane-type"><span class="zh-field-value"><i>A320A320A320A320</i>/C</span></td>
+							<td><span class="zh-field-value">1</span></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic zh-text-black-bold" type="text" readonly="readonly" value="1352"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value="1563+1"></td>
+							<td><input class="zh-input-dynamic" type="text" readonly="readonly" value=""></td>
+							<!-- <td><span class="zh-field-value">计划</span><span class="zh-status zh-status-red">备降(北京首都)</span></td>
+							<td title="15:20"><a class="zh-field-value" href="###" target="_blank">1520</span></td> -->
+	
+							<td><a class="zh-field-value zh-edit" href="###">编辑</a><a class="zh-field-value zh-msg zh-ml-5" href="###">消息</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- 事务消息 -->
+		<div class="zh-fd-transaction">
+			<div class="zh-transaction-heading active">
+				<h3>事务消息(45)</h3>
+				<div class="zh-stretch"></div>
+				<a class="zh-skip" href="javascript:layer.msg('跳转到消息列表页面');">消息列表</a>
+				<a class="zh-skip" id="zhSendMsg" href="###"><span class="zh-icon-pencil"></span>发送消息</a>
+			</div>
+
+			<div class="zh-fd-table zh-thead-fixed zh-fd-scrollbar">
+				<table class="zh-table text-left">
+					<thead>
+						<tr>
+							<th style="min-width:90px;">发送时间</th>
+							<th style="min-width:49px;">航班</th>
+							<th style="min-width:30px">机号</th>
+							<th style="min-width:14px;">机位</th>
+							<th style="min-width:44px;">城市</th>
+							<th style="min-width:33px;">进/出</th>
+							<th style="min-width:52px;">类型</th>
+							<th style="min-width:200px;">消息内容</th>
+							<th style="min-width:139px;">发送部门</th>
+							<th style="min-width:200px;">接收部门</th>
+							<th style="min-width:72px;">接收状态</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="zh-bg-light-yellow">
+							<td>16/06/01 22:32</td>
+							<td><span class="am_ellipsis" style="width:64px;">MU5532</span></td>
+							<td><span class="am_ellipsis" style="width:50px;">B5920</span></td>
+							<td><span class="am_ellipsis" style="width:34px;">512</span></td>
+							<td><span class="am_ellipsis" style="width:64px;">北京首都</span></td>
+							<td>进</td>
+							<td>事务催办</td>
+							<td><span class="zh-department">请速派客梯车至L33机位请速派客梯车至L33机位</span></td>
+							<td><span class="zh-department">航空公司-立荣航空(15:20)</span></td>
+							<td><span class="zh-department">飞行区运行指挥中心 飞行区运行指挥中心   保障单位-机场地服公司(15:35)</span></td>
+							<td><span>已确认</span></td>
+						</tr>
+						<tr>
+							<td>16/06/01 22:32</td>
+							<td><span class="am_ellipsis" style="width:64px;">MU5532</span></td>
+							<td><span class="am_ellipsis" style="width:50px;">B5920</span></td>
+							<td><span class="am_ellipsis" style="width:34px;">512</span></td>
+							<td><span class="am_ellipsis" style="width:64px;">北京首都</span></td>
+							<td>进</td>
+							<td>事务催办</td>
+							<td><span class="zh-department">请速派客梯车至L33机位</span></td>
+							<td><span class="zh-department">航空公司-立荣航空(15:20)</span></td>
+							<td><span class="zh-department">飞行区运行指挥中心   保障单位-机场地服公司(15:35)</span></td>
+							<td><a class="zh-confirm" href="###">确认</a></td>
+						</tr>
+						<tr>
+							<td>16/06/01 22:32</td>
+							<td><span class="am_ellipsis" style="width:64px;">MU5532</span></td>
+							<td><span class="am_ellipsis" style="width:50px;">B5920</span></td>
+							<td><span class="am_ellipsis" style="width:34px;">512</span></td>
+							<td><span class="am_ellipsis" style="width:64px;">北京首都</span></td>
+							<td>进</td>
+							<td>事务催办</td>
+							<td><span class="zh-department">请速派客梯车至L33机位</span></td>
+							<td><span class="zh-department">航空公司-立荣航空(15:20)</span></td>
+							<td><span class="zh-department">飞行区运行指挥中心   保障单位-机场地服公司(15:35)</span></td>
+							<td><a class="zh-confirm selected" href="###">已确认</a></td>
+						</tr>
+						<tr>
+							<td>16/06/01 22:32</td>
+							<td><span class="am_ellipsis" style="width:64px;">MU5532</span></td>
+							<td><span class="am_ellipsis" style="width:50px;">B5920</span></td>
+							<td><span class="am_ellipsis" style="width:34px;">512</span></td>
+							<td><span class="am_ellipsis" style="width:64px;">北京首都</span></td>
+							<td>进</td>
+							<td>事务催办</td>
+							<td><span class="zh-department">请速派客梯车至L33机位</span></td>
+							<td><span class="zh-department">航空公司-立荣航空(15:20)</span></td>
+							<td><span class="zh-department">飞行区运行指挥中心   保障单位-机场地服公司(15:35)</span></td>
+							<td><span>待确认</span></td>
+						</tr>
+						<tr>
+							<td>16/06/01 22:32</td>
+							<td><span class="am_ellipsis" style="width:64px;">MU5532</span></td>
+							<td><span class="am_ellipsis" style="width:50px;">B5920</span></td>
+							<td><span class="am_ellipsis" style="width:34px;">512</span></td>
+							<td><span class="am_ellipsis" style="width:64px;">北京首都北京首都北京首都</span></td>
+							<td>进</td>
+							<td>事务催办</td>
+							<td><span class="zh-department">请速派客梯车至L33机位</span></td>
+							<td><span class="zh-department">航空公司-立荣航空(15:20)</span></td>
+							<td><span class="zh-department">飞行区运行指挥中心   保障单位-机场地服公司(15:35)</span></td>
+							<td><span>已确认</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!-- 侧边 -->
+		<div class="zh-fd-aside">
+			<div class="zh-stretch"><div class="zh-icon-stretch"></div></div>
+
+			<div class="zh-aside-panel">
+				<div class="zh-aside-heading">
+					<span class="zh-arrow-rd"></span>
+					<strong>进港动态(12)</strong>
+				</div>
+
+				<div class="zh-fd-table zh-thead-fixed zh-fd-scrollbar am_fdTable">
+					<table class="zh-table text-left">
+						<thead>
+							<tr>
+								<th>航班</th>
+								<th>机号</th>
+								<th>预计</th>
+								<th>状态</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><span class="am_statusIcon zh-vip-yellow">V</span>MU5251</td>
+								<td>B5241</td>
+								<td><span class="am_statusIcon am_yuIcon">预</span>2235</td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td><span class="zh-text-red-bold">2235</span></td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td>2235</td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td>2235</td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td>2235</td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td>2235</td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td>2235</td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td>2235</td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td>2235</td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td>2235</td>
+								<td>起飞</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="zh-aside-panel zh-mt-10">
+				<div class="zh-aside-heading">
+					<span class="zh-arrow-rd"></span>
+					<strong>出港动态(12)</strong>
+				</div>
+
+				<div class="zh-fd-table zh-thead-fixed zh-fd-scrollbar am_fdTable">
+					<table class="zh-table text-left">
+						<thead>
+							<tr>
+								<th>航班</th>
+								<th>机号</th>
+								<th>预计</th>
+								<th>状态</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td>2235</td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td>2235</td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td>2235</td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td><span class="zh-text-red-bold">2235</span></td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td>2235</td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td>2235</td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td>2235</td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td>2235</td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td>2235</td>
+								<td>起飞</td>
+							</tr>
+							<tr>
+								<td>MU5251</td>
+								<td>B5241</td>
+								<td>2235</td>
+								<td>起飞</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="zh-fd-footer">
+		<div class="zh-instruction-history">
+			<div class="zh-title">
+				<strong>历史记录</strong>
+				<a class="zh-clear" href="###">清空</a>
+			</div>
+			<ul></ul>
+		</div>
+
+		<strong class="zh-text">指令(Enter)</strong>
+		<form class="zh-search" action="" id="zhInstuction">
+			<input type="text" class="zh-fd-input" placeholder="请查看指令列表">
+			<button class="zh-fd-btn" type="reset"></button>
+		</form>
+		<button class="zh-fd-btn zh-ml-10" id="zhInstructList" type="button">指令列表</button>
+		<span class="zh-text">*共125条航班列表</span>
+	</div>
+
+	<script>
+	
+	function fdListTheadFixFn() {
+		$('.zh-thead-fix thead th').css({
+			'background-color': '#2D2D35',
+			'box-shadow': '1px 0 0 0 #3D3D46'
+		});
+		$.theadFixedFn('.zh-thead-fix');
+	}
+	/* 设置高度 */
+	var setHgtFn = (function set() {
+		// 主体高度 (20是zh-fd-header的margin-bottom值+zh-fd-main margin-bottom的值)
+		var mainHgt = $(window).height() - $('.zh-navbar').outerHeight() - $('.zh-fd-header').height() - 20 - $('.zh-fd-footer').height();
+		$('.zh-fd-main').height(mainHgt);
+
+		if(!localStorage.getItem('ioFold')) {
+			// 主体右补白
+			$('.zh-fd-main').css('padding-right', 250);
+			// 右侧宽度
+			$('.zh-fd-aside').width(parseInt($('.zh-fd-main').css('padding-right')));
+		}
+
+		// 侧边表格高度 (第一个10是第二个panel margin-top的值，第二个10是表格margin左右的值)
+		var asideTableHgt = ($('.zh-fd-aside').height() - 10) / 2 - $('.zh-aside-heading').outerHeight() - 10;
+		$('.zh-fd-aside .zh-fd-table').height(asideTableHgt);
+
+		// 事务表格的高度
+		var tansactionTableHgt = (mainHgt*0.3) - $('.zh-transaction-heading').height();
+		$('.zh-fd-transaction .zh-fd-table').height(tansactionTableHgt);
+
+		// 列表高度
+		var listTableHgt = mainHgt - $('.zh-fd-transaction').height();
+		$('.zh-fd-list').height(listTableHgt);
+
+		// 列表滚动加载提示
+		$('.zh-scrollload-tip.zh-top').css({
+			'top': $('.zh-fd-list').offset().top,
+			'width': $('.zh-fd-list').outerWidth()
+		});
+		$('.zh-scrollload-tip.zh-bottom').css({
+			'top': $('.zh-fd-transaction').offset().top - 72,
+			'width': $('.zh-fd-list').outerWidth()
+		});
+
+		// 表头固定
+		fdListTheadFixFn();
+
+		return set;
+	})();
+
+	// 窗口改变大小重置高度
+	$(window).resize(setHgtFn);
+
+	// 事务消息折叠初始状态
+	if(localStorage.getItem('msgFold')) {
+		$('.zh-transaction-heading').removeClass('active');
+		$('.zh-fd-transaction>.zh-fd-table').show();
+		setHgtFn();
+	}
+	// 收起/展开事务消息
+	$('.zh-transaction-heading>.zh-stretch').click(function() {
+		if($(this).parent().hasClass('active')) {
+			$(this).parent().removeClass('active');
+			$('.zh-fd-transaction>.zh-fd-table').show();
+			localStorage.setItem('msgFold', true);
+		} else {
+			$(this).parent().addClass('active');
+			$('.zh-fd-transaction>.zh-fd-table').hide();
+			localStorage.removeItem('msgFold');
+		}
+		setHgtFn();
+	});
+
+	// 进出港折叠初始状态
+	if(localStorage.getItem('ioFold')) {
+		$('.zh-fd-aside>.zh-stretch').addClass('active');
+		$('.zh-fd-aside').width(0).children('.zh-aside-panel').hide();
+		$('.zh-fd-main').css('padding-right', 28);
+		setHgtFn();
+	}
+
+	// 收起/展开进出港动态
+	$('.zh-fd-aside>.zh-stretch').click(function() {
+		if($(this).hasClass('active')) {
+			$(this).removeClass('active');
+			$('.zh-fd-aside').width(250).children('.zh-aside-panel').show();
+			$('.zh-fd-main').css('padding-right', 250);
+			localStorage.removeItem('ioFold');
+		} else {
+			$(this).addClass('active');
+			$('.zh-fd-aside').width(0).children('.zh-aside-panel').hide();
+			$('.zh-fd-main').css('padding-right', 28);
+			localStorage.setItem('ioFold', true);
+		}
+		setHgtFn();
+	});
+
+	// 接收单位
+	var UNIT_INTERLOCK = [{
+			id:'0',
+			name:'飞行区运行指挥中心',
+			son:[
+			
+				{id:'11',name:'指挥中心1'},
+				{id:'12',name:'指挥中心2'},
+				{id:'13',name:'指挥中心3'}
+			]
+		},
+		{
+			id:'1',
+			name:'航空公司-立荣航空',
+			son:[
+				{id:'21',name:'立荣航空1'},
+				{id:'22',name:'立荣航空2'}
+			]
+		},
+		{
+			id:'2',
+			name:'航空公司-新航',
+			son:[
+				{id:'31',name:'新航1'},
+				{id:'32',name:'新航2'}
+			]
+		},
+		{
+			id:'3',
+			name:'航空公司-新航',
+			son:[
+				{id:'31',name:'新航1'},
+				{id:'32',name:'新航2'}
+			]
+		},
+		{
+			id:'4',
+			name:'百事特悦般酒店',
+			son:[
+				{id:'41',name:'酒店1'},
+				{id:'42',name:'酒店2'}
+			]
+		},
+		{
+			id:'5',
+			name:'安检站',
+			son:[
+				{id:'51',name:'安检站1'},
+				{id:'52',name:'安检站2'}
+			]
+		},
+		{
+			id:'6',
+			name:'安检站',
+			son:[
+				{id:'51',name:'安检站1'},
+				{id:'52',name:'安检站2'}
+			]
+		},
+		{
+			id:'0',
+			name:'其他',
+			son:null
+		}];
+
+	// 快捷短语
+	var SHORTCUT_PHRASE = [
+		'请速查客舱手提行李。',
+		'飞机故障是否排除？',
+		'飞机是何故障？',
+		'飞机已好，请各部门准备。'
+	];
+	</script>
+
+	<!-- 时间插件 -->
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+	<script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+	<!-- lay弹出层插件 -->
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+
+	<script type="text/javascript" src='js/flight_dynamic.js'></script>
+	<script type="text/javascript" src='js/flight_dynamic_instruction.js'></script>
+	<!-- <script type="text/javascript" src='js/warning.js'></script> -->
+	
+	<!-- 拖动 -->
+	<script type="text/javascript" src="js/jquery.dragsort-0.5.2.js"></script>
+	<script>
+		$(function() {
+			// 共享提示
+			var layerTip;
+			$('body').on('mouseenter','.zh-tip-share',function(){
+				var tipContent = $(this).data('share') || '&nbsp;';
+				layerTip = layer.tips(tipContent, $(this), {time: 5000});
+			}).on('mouseleave','.zh-tip-share',function(){
+				layer.close(layerTip);
+			});
+           var planeTypeTip;
+           $('body').on('mouseenter','.am-plane-type i',function() {
+               var tipContent = $.trim($(this).text());
+               if(tipContent.length > 5){
+                   planeTypeTip = layer.tips(tipContent, $(this), {time: 5000});
+               }
+           }).on('mouseleave','.am-plane-type i',function() {
+               if(planeTypeTip){
+                   layer.close(planeTypeTip);
+               }
+           });
+
+			// 导出列表
+			$('.zh-export-list .zh-skip').click(function() {
+				if($(this).hasClass('active')) {
+					$(this).removeClass('active').siblings('ul').slideUp(50);
+				} else {
+					$(this).addClass('active').siblings('ul').slideDown(50);
+				}
+			});
+			$('.zh-export-list ul li').click(function() {
+				// alert($(this).index()+' '+$(this).text());
+				$(this).parent().slideUp(50).siblings('.zh-skip').removeClass('active');
+				if($(this).is('.am-day-plan')){
+					var content = '<div class="am-export-wrap zh-mt-30 zh-text-center">\
+										<label class="zh-fd-radio active"><input type="radio" checked="checked">进港</label>\
+										<label class="zh-fd-radio zh-ml-30"><input type="radio">出港</label>\
+									</div>';
+					layer.open({
+						type : 1,
+						title : '<strong>次日计划导出</strong>',
+						area : ['300px','200px'],
+						content : content,
+						btn: ['确认','取消']
+					});
+				}
+			});
+
+			//数据更新切换
+			$('.am_fdTable tbody tr:lt(3)').each(function(){
+				updateFn($(this),$(this).html());  //模拟数据更新，可删除
+			});
+			function updateFn(row,content){
+				$(row).addClass('am_updateRow');
+				setTimeout(function(){
+					$(row).empty(); //模拟数据更新，可删除
+					$(row).html(content); //模拟数据更新，可删除
+					setTimeout(function(){
+						$(row).removeClass('am_updateRow');
+					},100);
+				},1000);
+			}
+		});
+	</script>
+</body>
+</html>
